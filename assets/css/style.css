@@ -1,0 +1,267 @@
+header{
+    display: flex;
+    justify-content: space-around;
+}
+header a{
+    color:purple;
+    text-decoration: none;
+}
+
+/* Lev1_2 Transition */
+.box{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-color: silver;
+    margin-bottom: 2%;
+}
+.box div{
+    position: absolute;
+    left:0;
+    height: 100px;
+    width: 100px;
+}
+.box1{
+    background-color: red;
+    top:2%x;
+    transition: 1s linear;
+}
+.box2{
+    background-color: green;
+    top: 150px;
+    transition: .5s linear;
+    transition-delay: 0.5s;
+}
+.box:hover > .box1{
+    left: 90%;
+    transition: left 1s linear;
+}
+.box:hover > .box2{
+    left: 90%;
+    transition: left .5s linear;
+    transition-delay: 0.5s;
+}
+/* Lev1_1 Transition */
+
+.divExpand{    
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    transition: 1s linear;
+}
+.divExpand:hover{
+    width: 100%;
+    transition: width 1s linear;
+}
+/* Lev2_1 */
+.secOvImg{
+    height: 250px;
+    width: 250px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 2%;
+}
+.secOvImg div{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+}
+.img{
+    background-image: url(../img/overflowIMG.jpeg);
+    top: 50px;
+    left: 0;
+}
+.overf{
+    top:250px;
+    left:0;
+    display: grid;
+    place-items: center;
+    background-color: rgba(0, 0, 0, 0.445);
+    transition: top 1s linear;
+}
+.overf h2{
+    color: aliceblue;
+}
+.secOvImg:hover > .overf{
+    top: 50px;
+    transition: top 1s linear;
+}
+/* Lev3_1 Transition */
+.ball{
+    margin-top: 5%;
+    height: 350px;
+    width: 100%;
+    position: relative;
+}
+.ballPink{
+    position: absolute;
+    display: grid;
+    place-items: center;
+    top: 50px;
+    left:0;
+    height: 200px;
+    width: 200px;
+    background-color: violet;
+    border-radius: 50%;
+    transition: left 1s linear;
+}
+.ballBlue{
+    position: absolute;
+    top:150px;
+    left:300px;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(89, 133, 190);
+    border-radius: 50%;
+    transition: left 2s linear;
+}
+.ballPink:active{
+    left: 110px;
+    transition: left 1s linear;
+}
+.ballPink:active +.ballBlue{
+    left:90%;
+    transition: left 2s linear;
+    transition-delay: 1s;
+}
+
+/* Lev1_1 Transform */
+.boxes{
+    position: relative;
+    height: 450px;
+    width: 100%;
+    margin-bottom: 5%;
+}
+.boxes h2{
+    color: antiquewhite;
+}
+.boxes div{
+    position: absolute;
+    display: grid;
+    place-items: center;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(81, 112, 35);
+    border-radius: 5px;
+    transition: .5s linear;
+}
+.translateDiv{
+    left: 10%;
+    top: 0;
+}
+.translateX{
+    left: 24%;
+    top:0;
+}
+.translateY{
+    left:38%;
+    top:0;
+}
+.rotate{
+    left: 10%;
+    top:58%;
+}
+.scale{
+    left: 24%;
+    top: 58%;
+}
+.skew{
+    left: 38%;
+    top: 58%;
+}
+    /* hover */
+.translateDiv:hover{
+    transform: translate(23%, 20%);
+}
+.translateX:hover{
+    transform: translateX(-30%);
+}
+.translateY:hover{
+    transform: translateY(30%);
+}
+.rotate:hover{
+    transform: rotate(45deg);
+}
+.scale:hover{
+    transform: scale(1.5);
+}
+.skew:hover{
+    transform: skew(20deg, 40deg);
+}
+/* Lev1_2 Transform */
+.secRotTra{
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+.rotTra{
+    position: absolute;
+    margin-left: 10%;
+    height: 100px;
+    width: 100px;
+    background-color: tomato;
+    border-radius: 5px;
+    transition: 1s linear;
+}
+.rotTra:hover{
+    transform: rotate(90deg) translate(100px, 0) scale(2);
+}
+/* Lev3_1 Transform */
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: silver;
+    position: relative;
+    height: 500px;
+    perspective: 800px;
+}
+.cards div{
+    position: absolute;
+    display: grid;
+    place-items: center;
+    transform: rotateY(-30deg) rotateX(30deg);
+    border-radius: 10px;
+    width: 500px;
+    opacity: 0.7;
+    transition: .5s linear;
+    box-shadow: 5px 5px 2px slategray;
+}
+.cardBlue{
+    background-color: skyblue;
+    top: 15%;
+    z-index: 3;
+}
+.cardYellow{
+    background-color: lightyellow;
+    top:30%;
+    z-index: 2;
+}
+.cardPink{
+    background-color: thistle;
+    top:45%;
+    z-index: 1;
+}
+/* hover */
+.cards div:hover{
+    transform: rotateY(-4deg) rotateX(10deg);
+    z-index: 4;
+    opacity: 1;
+}
+
+
+/* footer */
+footer{
+    position: fixed;
+    bottom: 2%;
+    right: 2%
+}
+footer a{
+    font-size: 3rem;
+    text-align: end;
+    color: cadetblue;
+    text-decoration: none;
+}
+footer a p{ 
+    padding-left: 5%;
+}
